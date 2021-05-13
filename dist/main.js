@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("alert('I exists')\n\n//# sourceURL=webpack:///./src/client/index.js?");
+eval("alert(\"I exist\")\n\n//# sourceURL=webpack:///./src/client/index.js?");
 
 /***/ })
 
