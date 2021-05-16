@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const json = require('')
+const HtmlWebPackPlugin = require ('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -12,15 +12,16 @@ module.exports = {
                         test: '/\.js$/',
                         exclude: /node_modules/,
                         loader: "babel-loader"
-                        }
-
-                        {
-                        test2 :'/\.json$/',
-                        exclude: /node_modules/,
-                        loader: "json-loader"
-                        }
-
+                        }                        
 
                     ]
-        }
+        },
+
+        plugins:[
+                new HtmlWebPackPlugin({
+                template: "./src/client/views/index.html",
+                filename: "./index.html",
+
+            })
+        ]
 }
